@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> {% block titulo %}{% endblock %}</title>
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet">
+    <link href="{% static 'css/adminlte.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/icheck-bootstrap.min.css' %}" rel="stylesheet">
+
+</head>
+<body style="margin: 0;
+    padding: 0;
+    font-family: helvetica, sans-serif;">
+    <div id="content" style="float: left;
+    width: 60%;
+    padding: 0 0 30px;">
+        {% block conteudo %}
+
+        {% endblock %}
+    </div>
+
+    <div id="sidebar">
+        <h2><a href="{% url 'blog:listar_posts' %}" style="color: #00abff;
+    text-decoration: none;">Meu Blog</a></h2>
+        <p style="color: black;
+    text-decoration: none;">Este e o meu blog</p>
+        {% if user.is_anonymous %}
+            <p><a class="btn btn-primary" style="font-weight: bold;
+    background: #00abff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 10px;
+    text-transform: uppercase;" href="{% url 'blog:cadastrouser' %}">Cadastrar</a></p>
+            <p><a class="btn btn-sucess" style="font-weight: bold;
+    background: green;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 10px;
+    text-transform: uppercase;" href="{% url 'blog:loginuser' %}">Entrar</a></p>
+        {% else %}
+            <p>Usuario: <b> {{ user.username }} </b></p>
+            <p><a class="btn btn-warning" style="font-weight: bold;
+    background: red;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-transform: uppercase;" href="{% url 'blog:logoutuser' %}">Sair</a></p>
+        {% endif %}
+    </div>
+</body>
+</html>
