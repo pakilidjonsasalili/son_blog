@@ -3,7 +3,13 @@
 {% block titulo %} << Meu Blog >> {% endblock %}
 
 {% block conteudo %}
-    <h1>Meu Blog</h1>
+<body class="blog">
+    <header class="border-primary">
+        <div class="container">
+            <h1>Blog do Riba's</h1>
+        </div>
+    </header>
+
     <div>
         {% if messages %}
             {% for m in messages %}
@@ -11,17 +17,20 @@
             {% endfor %}
         {% endif %}
     </div>
-    {% for p in posts %}
+    <div id="conteudo">
+        {% for p in posts %}
         <h2>
             <a href="{% url 'blog:detalhe' p.slug %}">{{ p.titulo }}</a>
         </h2>
         <p class="date">
             Publicado em {{ p.publicado }} por {{ p.autor }}
         </p>
-        <p>
-            {{ p.corpo|truncatewords:15|linebreaks }}
+        <p id="paragraph">
+            {{ p.corpo|truncatewords:60|linebreaks }}
         </p>
-    {% endfor %}
-
-    {% include "paginacao.html" with page=page_obj %}
+        {% endfor %}
+    </div>
+        {% include "paginacao.html" with page=page_obj %}
 {% endblock %}
+
+</body>

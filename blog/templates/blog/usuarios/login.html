@@ -4,7 +4,7 @@
 
 {% block conteudo %}
 <div class="container">
-    <form method="post" action="{% url 'blog:loginuser' %}">
+  <form method="post" action="{% url 'blog:loginuser' %}">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Login"/>

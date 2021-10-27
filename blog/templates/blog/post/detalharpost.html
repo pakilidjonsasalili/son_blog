@@ -8,18 +8,18 @@
         Publicado em {{ post.publicado }} por {{ post.autor }}
     </p>
 
-    <p>
+    <p class="paragraph">
         {{ post.corpo|linebreaks }}
     </p>
     <br>
     <h4>
-        <span style="margin-right: 5px; margin-left: 5px;">
+        <span style="margin-right: 2px; margin-left: 2px;">
             <a href="{% url 'blog:share_post' post.id %}">
                 Compartilhar post...
             </a>
         </span>
 
-        <span style="margin-right: 5px; margin-left: 5px;">
+        <span style="margin-right: 2px; margin-left: 2px;">
             <a href="{% url 'blog:comentar_post' post.id %}">
                 Comentar este post
             </a>
@@ -31,7 +31,7 @@
         </p>
     {% endfor %}
     <h4>
-        <span style="margin-right: 5px; margin-left: 5px;">
+        <span style="margin-right: 2px; margin-left: 2px;">
             <a href="{% url 'blog:comentar_post' post.id %}">
                 Adicionar comentario
             </a>

@@ -1,0 +1,154 @@
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    heigth: 20px solid #fff;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 1500px;
+
+}
+
+.blog {
+    margin-bottom: 20px;
+    background-position: center;
+}
+
+#paragraph {
+    border-left: 5px solid #2370a5;
+    padding-left: 5px;
+}
+
+header {
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    position: relative;
+    z-index: 999;
+}
+
+.border-primary {
+    border-color: #2f557c !important;
+}
+
+.container {
+
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a {
+    color: yellow;
+    text-decoration: none;
+}
+
+p {
+    color: black;
+    text-decoration: none;
+}
+
+
+p.date {
+    color: black;
+    font-family: georgia, serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+h1 {
+    font-neight: normal;
+    border-bottom: 1px solid #bbb;
+    padding: 0 0 10px 0;
+}
+
+h2 {
+    font-neight: normal;
+    margin: 10px 0 0;
+}
+
+#content {
+    float: left;
+    width: 60%;
+    padding: 0 0 30px;
+}
+
+#sidebar {
+    float: right;
+    width: 20%;
+    padding: 10px;
+    background-color: light grey;
+    height: 500px;
+    border-radius: 10px;
+}
+
+/* paginacao */
+.pagination {
+    margin: 40px 0;
+    font-weight: bold;
+}
+
+/* forms */
+label {
+    float: left;
+    margin: 0 0 10px;
+    background: #ededed;
+    border: 0;
+    padding: 5px 5px;
+    font-size: 12px;
+}
+
+input[type=submit] {
+    font-weight: bold;
+    background: #00abff;
+    color: #fff;
+    padding: 5px 5px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.errorlist {
+    color: #cc0033;
+    float: left;
+    clear: both;
+    padding-left: 10px;
+}
+
+/* comments */
+.comment {
+    padding: 5px;
+}
+
+.comment:nth-child(even) {
+    background: #efefef;
+}
+
+.comment .info {
+    font-weight: bold;
+    font-size: 14px;
+    color: #666;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p span, ul {
+    display: none;
+}
+
+/* cadastro */
+
+#conteudo {
+    width: 300px;
+    border-radius: 15px;
+    height: 300px;
+}
+
